@@ -1,7 +1,7 @@
 
 ## Trabalho de Conclusão de Curso
 
-Repositório dedicado para o meu trabalho de conclusão de curso, foi utilizado inteligência artificial (IA) e internet das coisas, além de outras tecnologias nesse projeto.
+Repositório dedicado para o trabalho de conclusão de curso, foi utilizado inteligência artificial (IA) e internet das coisas, além de outras tecnologias nesse projeto.
 
 ## 📔 Tecnologias utilizadas:
 
