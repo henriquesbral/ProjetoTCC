@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="~/css/atualizarCadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <nav class="navbar bg-light" aria-label="Light offcanvas navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
+          aria-controls="offcanvasNavbarLight">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="1" id="offcanvasNavbarLight"
+          aria-labelledby="offcanvasNavbarLightLabel">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/TelaPrincipal/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/PainelAlertas/painelalertas.html">Painel de alertas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="img_user">
+      <img src="/Assets/user.jpeg" alt="imagem usuario">
+    </div>
+    <div class="dados">
+      <form class="dados_basicos_form">
+        <div class="nome">
+          <label>Nome</label>
+          <input class="input_basicos" type="text" placeholder="Abilio">
+        </div>
+        <div class="cpf">
+          <label>CPF</label>
+          <input class="input_basicos" type="int" placeholder="123">
+        </div>
+        <div class="data_nasc">
+          <label>Data de Nascimento</label>
+          <input class="input_basicos" type="date" placeholder="00/00/0000">
+        </div>
+        <div class="sexo">
+          <label>Sexo</label>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">Masculino</label>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">Feminino</label>
+        </div>
+        <div class="estado_civil">
+          <label class="form-label">Estado Cívil:</label>
+          <select class="input_basicos">
+            <option value="1">Solteiro</option>
+            <option value="2">Casado</option>
+            <option value="3">Divorciado</option>
+          </select>
+        </div>
+        <div class="dados_endereco">
+          <h2 class="titulo_dados_endereco">Endereço</h2>
+          <form class="dados_endereco_form">
+            <div class="logradouro">
+              <label>Logradouro</label>
+              <input type="text" placeholder="Rua Caruxa">
+            </div>
+            <div class="numero">
+              <label>Número</label>
+              <input type="int" placeholder="123">
+            </div>
+            <div class="complemento">
+              <label>Complemento</label>
+              <input type="text" placeholder="Viela">
+            </div>
+            <div class="cidade">
+              <label>Cidade</label>
+              <input type="text" placeholder="São Paulo">
+            </div>
+            <div class="estado">
+              <label>Estado</label>
+              <select>
+                <option value="">São Paulo</option>
+              </select>
+            </div>
+            <button type="submit" onclick="salvarCadastro(); return false">Salvar</button>
+          </form>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  </div>
+  <script src="/Scripts/atualizarCadastro.js" defer></script>
+  <script src="/Bootstrap/js/jquery.min.js"></script>
+  <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/Preload/preloader.js"></script>
+</body>
+
+</html>

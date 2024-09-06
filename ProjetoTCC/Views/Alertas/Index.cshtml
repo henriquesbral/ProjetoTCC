@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de alertas</title>
+  <link rel="stylesheet" href="~/css/alertas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="navbar" aria-label=" offcanvas navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
+          aria-controls="offcanvasNavbarLight">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight"
+          aria-labelledby="offcanvasNavbarLightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Painel de alertas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/TelaPrincipal/dashboard.html">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <a href="painelalertas.html" class="cabecalho_titulo">Painel Alertas</a>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="/Assets/user.jpeg" alt="icon_user" width="35" height="35" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small"
+            style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34.4px, 0px);"
+            data-popper-placement="bottom-end">
+            <li><a class="dropdown-item" href="/Cadastro/atualizarCadastro.html">Atualizar cadastro</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/TelaLogin/login.html">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="titulo_painel">
+      <img src="/Assets/img_relatorio.png" alt="imagem_relatorio" width="50px" height="50px">
+      <h2>Relatório Painel Alertas</h2>
+    </div>
+    <section class="filtro">
+      <div class="filtro_alertas">
+        <form class="form">
+          <div class="form_data">
+            <label class="form-label">Data Inicial:</label>
+            <input type="datetime-local" class="form-control" id="datainicio">
+            <label class="form-label">Data Final:</label>
+            <input type="datetime-local" class="form-control" id="datafim">
+          </div>
+          <div class="form_select">
+            <label class="form-label">Tipo Alerta:</label>
+            <select class="form-select">
+              <option selected>Todos</option>
+              <option value="1">Crítico</option>
+              <option value="2">Alto</option>
+              <option value="3">Médio</option>
+              <option value="4">Baixo</option>
+            </select>
+            <div class="form_submit">
+              <button class="btn btn-success" type="submit">Filtrar</button>
+              <button class="btn btn-secondary" type="reset">Limpar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="alertas_tabela">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Detalhes</th>
+            <th scope="col">Tipo Alerta</th>
+            <th scope="col">Nível</th>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+      </table>
+    </section>
+  </main>
+  <script src="/Scripts/painelAlertas.js" defer></script>
+  <script src="/Bootstrap/js/jquery.min.js"></script>
+  <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/Preload/preloader.js"></script>
+</body>
+
+</html>

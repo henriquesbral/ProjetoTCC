@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/Bootstrap/css/style.css">
+  <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="navbar" aria-label=" offcanvas navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
+          aria-controls="offcanvasNavbarLight">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+          <a href="dashboard.html" class="dash">Dashboard</a>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight"
+          aria-labelledby="offcanvasNavbarLightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Bom vindo a tela de Dashboard</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/PainelAlertas/painelalertas.html">Painel de alertas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="/Assets/user.jpeg" alt="icon_user" width="35" height="35" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small"
+            style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34.4px, 0px);"
+            data-popper-placement="bottom-end">
+            <li><a class="dropdown-item" href="/Cadastro/atualizarCadastro.html">Atualizar cadastro</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/TelaLogin/login.html">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="alertas">
+      <div class="titulo_alertas">
+        <h3>Ultimos alertas</h3>
+      </div>
+      <div class="descricao_alertas">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Alto</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">01/01/2024 12:20</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link" onclick="detalhesAlertas(); return false">Ver detalhes</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Médio</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">01/01/2024 13:20</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link" onclick="detalhesAlertas(); return false">Ver detalhes</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Baixo</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">01/01/2024 14:20</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link" onclick="detalhesAlertas(); return false">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1690940891829!6m8!1m7!1sOiveAOL2zWhvqBAfnPul-g!2m2!1d-23.63952401360213!2d-46.74443689714118!3f280.96220333687495!4f-6.577212679317753!5f2.920581954847005"
+        width="800" height="400" style="box-sizing: border-box; border-radius: 10px; border: 2px solid black;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2022 TCC - Universidade Paulista, Grupo 14</p>
+  </footer>
+
+  <script src="/Scripts/dashboard.js" defer></script>
+  <script src="/Bootstrap/js/jquery.min.js"></script>
+  <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/Preload/preloader.js"></script>
+  <script
+    type="text/javascript"> function setWidgetData_521018427(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_' + params.widget_type + '_' + params.widget_id); if (objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_521018427 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=585;type=22;id=521018427;scode=124;city_id=18266;wlangid=8;mode=0;details=0;background=ffffff;border_color=ffffff;color=686868;add_background=ffffff;add_color=333333;head_color=ffffff;border=0;transparent=0"; var widgetUrl = location.href; widgetSrc += '&ref=' + widgetUrl; var wstrackId = ""; if (wstrackId) { widgetSrc += ';wstrackId=' + wstrackId + ';' } var timeBookedScript = document.createElement("script"); timeBookedScript.setAttribute("type", "text/javascript"); timeBookedScript.src = widgetSrc; document.body.appendChild(timeBookedScript); </script>
+  <script
+    type="text/javascript"> var css_file = document.createElement("link"); css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", "https://s.bookcdn.com//css/cl/bw-cl-c22.css?v=0.0.1"); document.getElementsByTagName("head")[0].appendChild(css_file); </script>
+</body>
+
+</html>
